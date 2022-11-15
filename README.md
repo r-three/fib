@@ -67,6 +67,7 @@ The different alternative choices include
 4. FIR - factually inconsistent reference summaries (i.e. reference summaries from XSum or CNN\DM that were annotated as factually inconsistent)
 5. factually consistent model generated-summaries. 
 
+Each example is a `json` consisting of the following keys: `{id, input, correct_choice, list_choices, lbl}`
 
 ## Citation ##
 
