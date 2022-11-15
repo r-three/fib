@@ -2,7 +2,7 @@
 
 ## FIB Benchmark 
 
-The FIB benchmark consists of evaluating every multiple-choice dataset using a different distractor model under ``multiple_choice-dataset/{dataset}/fib``. Then, it takes the median accuracy of the model across prompts for each distractor method. Finally, it takes a weighted average of the median accuracies across different distractor models.
+The FIB benchmark consists of evaluating every multiple-choice dataset using a different distractor model under ``multiple_choice-dataset/{dataset}/fib``. Then, it takes the median accuracy of the model across prompts for each distractor model. Finally, it takes a weighted average of the median accuracies across different distractor models.
 
 The following commands will run it. 
 ```
@@ -49,7 +49,6 @@ The following command is used to gather multiple results and get the median scor
 ```
 python src/scripts/get_results.py -e {all_experiment_directories_of_datasets} -m {list_models}
 ``` 
-Note that``scores.json`` files contain the scores for all the prompts.
 
 For example, 
 ```
@@ -66,11 +65,8 @@ The different alternative choices include
 2. [FactCC](https://github.com/salesforce/factCC.git) 
 3. [MFMA](https://github.com/hwanheelee1993/MFMA)
 4. FIR - factually inconsistent reference summaries (i.e. reference summaries from XSum or CNN\DM that were annotated as factually inconsistent)
-5. factually consistent model generated summaries. 
+5. factually consistent model generated-summaries. 
 
-## Contact ##
-
-For any doubts or questions regarding the work, please contact Derek ([dtredsox@cs.unc.edu](mailto:dtredsox+adapet@cs.unc.edu)). For any bug or issues with the code, feel free to open a GitHub issue or pull request.
 
 ## Citation ##
 
