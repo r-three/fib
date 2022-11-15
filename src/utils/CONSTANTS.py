@@ -1,0 +1,2 @@
+
+NULL_STRING = "NULL"

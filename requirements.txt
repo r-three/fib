@@ -1,0 +1,14 @@
+torch==1.12.1
+rouge-metric
+ipdb
+sentencepiece
+deepspeed
+accelerate
+rouge-score
+datasets
+fairseq
+rouge
+tqdm
+protobuf==3.19.0
+git+https://github.com/huggingface/transformers.git@6690ba3f4d036bc39bdf29ec98daf2c693442503
+bitsandbytes
