@@ -6,7 +6,6 @@ The dataset can be found [here]() .
 Note that the multiple-choice accuracy is computed slightly different way in our work. See [below](#evaluating-models-on-fIB) for more details. 
 
 
-
 ## Evaluating Models 
 
 ### Setup
@@ -25,7 +24,7 @@ python -m pip install -r requirements.txt -f https://download.pytorch.org/whl/cu
 source bin/setup.sh
 ```
 
-### Evaluating Models
+### Running Models
 
 The following command is used to evaluate models: 
 ```
@@ -45,7 +44,6 @@ The following command is used to gather multiple results and get the median scor
 ```
 python src/scripts/get_results.py -e {all_experiment_directories_of_datasets} -m {list_models}
 ``` 
-Note that``scores.json`` files contain the scores for all the prompts.
 
 For example, 
 ```
@@ -75,11 +73,9 @@ The different alternative choices include
 2. [FactCC](https://github.com/salesforce/factCC.git) 
 3. [MFMA](https://github.com/hwanheelee1993/MFMA)
 4. FIR - factually inconsistent reference summaries (i.e. reference summaries from XSum or CNN\DM that were annotated as factually inconsistent)
-5. factually consistent model generated summaries. 
+5. factually consistent model generated-summaries. 
 
-## Contact ##
-
-For any doubts or questions regarding the work, please contact Derek ([dtredsox@cs.unc.edu](mailto:dtredsox+adapet@cs.unc.edu)). For any bug or issues with the code, feel free to open a GitHub issue or pull request.
+Each example is a `json` consisting of the following keys: `{id, input, correct_choice, list_choices, lbl}`
 
 ## Citation ##
 
