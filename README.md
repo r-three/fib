@@ -1,9 +1,12 @@
 # FIB
 
+<img src="img/intro.png"/> 
+
+
 ## FIB Benchmark
 
-The dataset can be found [here]() .
-Note that the multiple-choice accuracy is computed slightly different way in our work. See [below](#evaluating-models-on-fIB) for more details. 
+The dataset is now on [HuggingFace](https://huggingface.co/datasets/r-three/fib) :hugs:
+Note that the multiple-choice accuracy is computed in a slightly different way in our work. See [below](#evaluating-models-on-fib) for more details. 
 
 
 ## Evaluating Models 
@@ -83,7 +86,12 @@ Each example is a `json` consisting of the following keys: `{id, input, correct_
 If you find this repo helpful, welcome to cite our work:
 
 ```
-
+@article{tam2022fib,
+  title={Evaluating the Factual Consistency of Large Language Models Through Summarization},
+  author={Tam, Derek and Mascarenhas, Anisha and Zhang, Shiyue and Kwan, Sarah and Bansal, Mohit and Raffel, Colin},
+  journal={arXiv preprint arXiv:2211.08412},
+  year={2022}
+}
 ```
 
 We use the following code in our works:
