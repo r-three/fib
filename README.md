@@ -1,17 +1,13 @@
 # FIB
 
-## FIB Benchmark 
+## FIB Benchmark
 
-The FIB benchmark consists of evaluating every multiple-choice dataset using a different distractor model under ``multiple_choice-dataset/{dataset}/fib``. Then, it takes the median accuracy of the model across prompts for each distractor method. Finally, it takes a weighted average of the median accuracies across different distractor models.
-
-The following commands will run it. 
-```
-python src/evaluate_mulChoice.py -f multiple_choice-dataset/{dataset}/fib/binary_choice-* -m {model}
-python src/compute_fib_results.py -m {model} -d {dataset}
-```
+The dataset can be found [here]() .
+Note that the multiple-choice accuracy is computed slightly different way in our work. See [below](#evaluating-models-on-fIB) for more details. 
 
 
-## Evaluating Models on FIB 
+
+## Evaluating Models 
 
 ### Setup
 
@@ -55,6 +51,19 @@ For example,
 ```
 python src/scripts/get_results.py -f exp_out/multiple_choice/xsum/fib/* -m bigscience-T0_3B
 ```
+
+## Evaluating Models on FIB
+
+The difference between the FIB dataset released above and the evaluation here is 
+- Here, we take the median accuracy across of the model across 3 prompts for each distractor model used. Then, we take a weighted average of the median accuracies across different distractor models.
+- In the FIB dataset, we combine all the examples from each distractor model and across XSum and CNN/DM into one file to simplify it. Users can use any prompt they want.
+
+The following commands will run it. 
+```
+python src/evaluate_mulChoice.py -f multiple_choice-dataset/{dataset}/fib/binary_choice-* -m {model}
+python src/compute_fib_results.py -m {model} -d {dataset}
+```
+
 
 
 ## Other Binary Multiple-Choice Datasets
