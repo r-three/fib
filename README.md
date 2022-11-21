@@ -1,5 +1,7 @@
 # FIB
 
+This repository contains the code for ["Evaluating the Factual Consistency of Large Language Models Through Summarization"](https://arxiv.org/abs/2211.08412)
+
 <img src="img/intro.png"/> 
 
 
